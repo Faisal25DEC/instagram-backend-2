@@ -24,6 +24,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://instaclonevi.netlify.app",
+      "https://intagra-frontend.vercel.app",
     ],
     credentials: true,
   })
