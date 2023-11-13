@@ -27,6 +27,7 @@ app.use(
       "https://intagra-frontend.vercel.app",
     ],
     credentials: true,
+    "Access-Control-Allow-Origin": true,
   })
 );
 app.use(express.json());
