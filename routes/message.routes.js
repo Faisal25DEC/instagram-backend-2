@@ -5,6 +5,10 @@ const messageRouter = require("express").Router();
 
 //add
 
+messageRouter.get("/", (req, res) => {
+  res.send({ msg: "Message Router Basic Endpoint" });
+});
+
 messageRouter.post("/", async (req, res) => {
   try {
     const user = await UserModel.findById(req.body.sender);

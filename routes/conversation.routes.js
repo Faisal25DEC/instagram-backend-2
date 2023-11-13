@@ -2,6 +2,10 @@ const conversationModel = require("../model/conversation.model");
 
 const conversationRouter = require("express").Router();
 
+conversationRouter.get("/", (req, res) => {
+  res.send({ msg: "Conversation Router Base Endpoint" });
+});
+
 conversationRouter.post("/", async (req, res) => {
   try {
     const existingConversation = await conversationModel.findOne({
