@@ -32,7 +32,7 @@ app.use(
       "http://localhost:3001",
       "https://instaclonevi.netlify.app",
       "https://intagra-frontend.vercel.app",
-      "https://stunning-hummingbird-49823f.netlify.app/",
+      "https://stunning-hummingbird-49823f.netlify.app",
     ],
     credentials: true,
   })
