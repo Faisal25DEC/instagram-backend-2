@@ -16,7 +16,7 @@ conversationRouter.post("/", async (req, res) => {
         members: [req.body.senderId, req.body.receiverId],
       });
 
-      res.status(200).json(newConversation);
+      return res.status(200).json(newConversation);
     }
 
     res.status(200).send(existingConversation);
