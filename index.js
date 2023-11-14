@@ -107,11 +107,13 @@ io.on("connection", (socket) => {
   //send and get message
   socket.on("sendMessage", ({ senderId, receiverId, text, senderImage }) => {
     const user = getUser(receiverId);
-    io.to(user.socketId).emit("getMessage", {
-      senderImage,
-      senderId,
-      text,
-    });
+    if (!user) {
+      io.to(user.socketId).emit("getMessage", {
+        senderImage,
+        senderId,
+        text,
+      });
+    }
   });
 
   //disconnect
